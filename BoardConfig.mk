@@ -24,7 +24,7 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 USE_CAMERA_STUB := true
-
+BOARD_PROVIDES_LIBRIL := true
 # inherit from common msm8660
 -include device/pantech/msm8660-common/BoardConfigCommon.mk
 
@@ -67,10 +67,12 @@ TARGET_USES_QCOM_LPA := true
 COMMON_GLOBAL_CFLAGS += -DWITH_QCOM_LPA
 
 # Vold
-BOARD_VOLD_MAX_PARTITIONS := 26
+BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
+BOARD_VOLD_MAX_PARTITIONS := 27
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/file
 
 BOARD_SDCARD_DEVICE_PRIMARY   := /dev/block/mmcblk1p1
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p26
+BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p27
 BOARD_SDEXT_DEVICE            := /dev/block/mmcblk1p2
 # recovery
 BOARD_HAS_NO_SELECT_BUTTON     := true
