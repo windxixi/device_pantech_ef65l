@@ -73,7 +73,9 @@ PRODUCT_COPY_FILES += \
 # Vold configuration
 PRODUCT_COPY_FILES += \
     device/pantech/ef65l/prebuilt/vold.fstab:system/etc/vold.fstab
-
+# IDC
+PRODUCT_COPY_FILES += \
+    device/pantech/ef65l/idc/qt602240_ts_input.idc:system/usr/idc/qt602240_ts_input.idc \
 # Set default USB interface
 #PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 #    persist.sys.usb.config=mass_storage
