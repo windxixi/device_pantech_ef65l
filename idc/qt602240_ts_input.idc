@@ -34,5 +34,7 @@ touch.size.isSummed = 0
 touch.pressure.calibration = amplitude
 touch.pressure.scale = 0.1
 
+keyboard.layout = qwerty
+keyboard.characterMap = qwerty
 # Orientation
 touch.orientation.calibration = none
