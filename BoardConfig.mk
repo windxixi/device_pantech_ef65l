@@ -44,6 +44,21 @@ BOARD_KERNEL_PAGESIZE       := 2048
 # Define Prebuilt kernel locations
 TARGET_PREBUILT_KERNEL      := device/pantech/ef65l/prebuilt/kernel
 
+# wifi
+# Connectivity - Wi-Fi
+BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+WPA_SUPPLICANT_VERSION      := VER_0_6_X
+# uses bcm4330
+BOARD_WLAN_DEVICE           := bcm4330
+WIFI_DRIVER_MODULE_PATH     := "/lib/modules/wlan.ko"
+WIFI_DRIVER_FW_STA_PATH     := "/system/etc/wl/bcm4330.bin"
+WIFI_DRIVER_FW_AP_PATH      := "/system/etc/wl/bcm4330_apsta.bin"
+WIFI_DRIVER_FW_PATH_P2P     := "/system/etc/wl/bcm4330_p2p.bin"
+WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/wl/bcm4330.bin nvram_path=/system/etc/wl/nvram.txt"
+WIFI_DRIVER_MODULE_NAME     := "wlan"
+WIFI_EXT_MODULE_PATH        := "/system/lib/modules/librasdioif.ko"
+WIFI_EXT_MODULE_NAME        := "librasdioif"
+
 # fs
 TARGET_USERIMAGES_USE_EXT4         := true
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 10485760
@@ -53,8 +68,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1073741824
 BOARD_FLASH_BLOCK_SIZE             := 131072
 
 BOARD_USES_GENLOCK           := false
-BOARD_USE_LEGACY_TOUCHSCREEN := true
-BOARD_USE_LEGACY_TRACKPAD := true
+#BOARD_USE_LEGACY_TOUCHSCREEN := true
+#BOARD_USE_LEGACY_TRACKPAD := true
 
 # FIXME: needs to be disabled for camera preview to work correctly
 TARGET_QCOM_HDMI_OUT := false

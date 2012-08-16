@@ -1,7 +1,24 @@
+#bins
+bin/cnd
+bin/cpmgrif
+bin/geomagneticd
+bin/hdmid
+bin/pam_server
+bin/qrngd
+bin/time_daemon
+bin/usb_serial_write
+
 # Add device specific blobs here
 # NFC
 lib/libpn544_fw.so
 
 # Wi-Fi
 etc/wl/nvram.txt
+#Ril
+lib/libdsm.so
+lib/libnv_fusion.so
+lib/liboem_rapi_fusion.so
+#egl
+lib/egl/libGLESv2S3D_adreno200.so
+lib/libsc-a2xx.so
 
